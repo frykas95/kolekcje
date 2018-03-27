@@ -1,5 +1,7 @@
 package kolekcje;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -18,11 +20,23 @@ public class Kolekcje {
         
         HashMap<Integer,Integer> map2 = new HashMap();
         
+        
             for(Integer a : map.keySet())
             {
                 map2.put(map.get(a), a);
             }
             System.out.println(map2);
+            
+        Collection<Integer> wart = map.values();    
+        Set<Integer> key = map.keySet();
+        ArrayList<Integer> list = new ArrayList();
+        list.addAll(key);
+        
+        ArrayList<Integer> list2 = new ArrayList();
+        list2.addAll(wart);
+      
+        System.out.println(list);
+        System.out.println(list2);
     }
     
 }
